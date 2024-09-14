@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+   
+    <script src="./src/index.js"></script>
+</head>
+<body class="container-fluid bg-dark text-white">
+    <h1 class="text-center">EMI Calculator</h1>
+    <div class="m-4 p-4 bg-white text-dark">
+        <!-- first div for first row started -->
+        <div class="row">
+            <div class="col">
+                Amount you need <input type="text" id="txtAmount" size="10">
+            </div class="col">
+            <div class="col">
+                for <input type="text" size="1" id="txtYears"> years
+            </div>
+            <div class="col">
+                interest rate <input type="number" id="txtRate" size="2"> %
+            </div>
+        </div>
+        <!-- first div for first row ended -->
+        <!-- second div for second row started -->
+        <div class="row mt-4">
+            <div class="col">
+                <input type="range" onchange="AmountChange()" min="50000" max="4000000" value="50000" id="rangeAmount" class="form-range">
+            </div class="col">
+            <div class="col">
+                <input type="range" onchange="YearsChange()" min="1" max="5" value="2" id="rangeYears" class="form-range">
+            </div>
+            <div class="col">
+                <input type="range" onchange="RateChange()" min="10.5" max="21" value="12" id="rangeRate" class="form-range">
+            </div>
+        </div>
+        <!-- second div for second row ended -->
+        <!-- third div for third row started -->
+        <div class="row mt-4">
+            <div class="col">
+                <span class="float-start">&#8377; 50,000</span>
+                <span class="float-end">&#8377; 40,00,000</span>
+            </div>
+            <div class="col">
+                <span class="float-start">
+                    1 Year
+                </span>
+                <span class="float-end">
+                    5 Year
+                </span>
+            </div> 
+            <div class="col">
+                <span class="float-start">10.5%</span>
+                <span class="float-end">21%</span>
+            </div>
+        </div>
+        <!-- third div for third row ended -->
+        <!-- fourth div for fourth row started -->
+        <div class="row mt-4">
+            <div class="col text-end"><button class="btn btn-primary" onclick="calculateclick()">Calculate</button></div>
+            <div class="row mt-4">
+                <p id="result" class="result text-center p-4 ms-2 h3">
+
+                </p>
+            </div>
+        </div>
+        <!-- fourth div for fourth row ended -->
+    </div>
+    
+    <script></script>
+    <script></script>
+</body>
+</html>
